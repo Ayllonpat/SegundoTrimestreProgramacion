@@ -13,9 +13,17 @@ public class Trabajador {
 		this.dni = dni;
 	}
 	
+	//constructor solo dni para llamarlo en empleado
+	
+	public Trabajador(String dni) {
+		super();
+		this.dni = dni;
+	}
+	
 	public String getNombre() {
 		return nombre;
 	}
+	
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
@@ -37,6 +45,8 @@ public class Trabajador {
 		return "Trabajador [nombre=" + nombre + ", puesto=" + puesto + ", dni=" + dni + "]";
 	}
 	
-	
+	public double calacularPaga() {
+		return 0.0;
+	}
 
 }
