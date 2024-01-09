@@ -46,4 +46,11 @@ public class Empleado extends Trabajador {
 		return sueldo-sueldo*impuestos/cien;
 	}
 	
+	public double calcularPagaV2(double fijo) {
+		double cien = 100.0;
+		double total=0.0;
+		total= super.calcularPagaV2(fijo) +sueldo-sueldo*impuestos/cien;
+		return total;
+	}
+	
 }

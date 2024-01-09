@@ -45,8 +45,13 @@ public class Trabajador {
 		return "Trabajador [nombre=" + nombre + ", puesto=" + puesto + ", dni=" + dni + "]";
 	}
 	
-	public double calacularPaga() {
+	public double calcularPaga() {
 		return 0.0;
+	}
+	
+	public double calcularPagaV2(double fijo) {
+		fijo=1000;
+		return fijo;
 	}
 
 }

@@ -41,5 +41,19 @@ public class Consultor extends Trabajador {
 	public double calcularPaga() {
 		return tarifa*horas;
 	}
+	
+	public double calcularPagaV2(double fijo) { //si la madre tiene un parámetro auqnue no se use hay q pasarlo
+		double total=0.0;
+		total= super.calcularPagaV2(fijo)+ tarifa*horas;
+		return total;
+	}
+	
+	public void avisarExtras() {
+		if(horas>=40) {
+			
+			System.out.println("Ha pasado las horas");
+			
+		}
+	}
 
 }

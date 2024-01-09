@@ -13,6 +13,8 @@ public class Principal {
 		
 		Scanner sc=new Scanner(System.in);
 		
+		double fijo=0.0;
+		
 		Trabajador t1=new Trabajador("Lucia", "CEO", "89641021R");
 		Empleado e1=new Empleado("Maria","Encargada", "691234086T", 2100.0, 11.5);
 		Empleado e2=new Empleado("9462368F", 1200.2, 15.0);
@@ -22,10 +24,18 @@ public class Principal {
 		System.out.println(e1);
 		System.out.println(e2);
 		
-		System.out.println(t1.calacularPaga());
+		System.out.println(t1.calcularPaga());
 		System.out.println(e1.calcularPaga());
 		System.out.println(c1.calcularPaga());
-
+		
+		System.out.println(t1.calcularPagaV2(fijo));
+		System.out.println(e1.calcularPagaV2(fijo));
+		System.out.println(c1.calcularPagaV2(fijo));
+		
+		System.out.println("-------------------------");
+		
+		c1.avisarExtras();
+		
 	}
 
 }
