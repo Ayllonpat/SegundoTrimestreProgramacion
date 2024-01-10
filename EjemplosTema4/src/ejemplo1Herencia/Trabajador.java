@@ -50,8 +50,11 @@ public class Trabajador {
 	}
 	
 	public double calcularPagaV2(double fijo) {
-		fijo=1000;
 		return fijo;
+	}
+	
+	public void darDeBaja() { //ejemplo caca rápido
+		puesto="baja";
 	}
 
 }
