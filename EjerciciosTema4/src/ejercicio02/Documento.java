@@ -54,7 +54,14 @@ public class Documento {
 	}
 	
 	public void imprimirDocumento() {
+		System.out.println("----------------------------------------------------");
+		System.out.println("\t\t"+nombreEmpresa);
+		System.out.println("----------------------------------------------------\n");
 		
+		System.out.println(direccionEmpresa);
+		System.out.println(nEmpresa);
+		System.out.println(correoEmpresa);
+		System.out.println("-----------------------------------------------------\n");
 	}
 
 }

@@ -13,7 +13,21 @@ public class Principal {
 			persona y la carta, una fecha.
 			Crear un main para hacer una prueba con cada método llamado con objetos de las distintas clases.
 		 */
-
+		
+		Documento d=new Documento("Salesianos", "/Calle Virgen de Lujan", 654548240, "afhjañf@gmail.com");
+		TarjetaDeVisita t=new TarjetaDeVisita("Salesianos", "/Calle Virgen de Lujan", 654548240, "afhjañf@gmail.com", "Maria Romero", 22, 46891624, "hdlfaflasd@gmail.com");
+		Carta c=new Carta("Salesianos", "/Calle Virgen de Lujan", 654548240, "afhjañf@gmail.com", "23/04/2002", "lhahfhihifhaihvlbshfhafñbvbal");
+		
+		System.out.println("---------------------");
+		System.out.println(d);
+		System.out.println(t);
+		System.out.println(c);
+		System.out.println("*********************");
+		d.imprimirDocumento();
+		System.out.println("*********************");
+		t.imprimirDocumento();
+		System.out.println("*********************");
+		c.imprimirDocumento();
 	}
 
 }
