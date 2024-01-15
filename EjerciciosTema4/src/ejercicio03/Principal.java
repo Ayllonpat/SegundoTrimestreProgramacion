@@ -26,7 +26,7 @@ public class Principal {
 		String aux;
 		
 		
-		Vehiculo v=new Vehiculo();//escribir atributos
+		//escribir atributos
 		Coches c=new Coches(1, 120, 160, 50);
 		Motocicletas m=new Motocicletas(2, 69, 120, 45);
 		Furgonetas f=new Furgonetas(3, 250, 100, 15);
