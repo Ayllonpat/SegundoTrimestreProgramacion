@@ -31,6 +31,8 @@ public class Principal {
 		
 		int tam=3;
 		
+		System.out.println(p1.calcularPrecio());
+		
 		ProductoGenerico[]lista = new ProductoGenerico[tam];
 		
 		lista[0]=p1;
@@ -38,6 +40,8 @@ public class Principal {
 		lista[2]=p3;
 		
 		v.generarListaProduuctosVendidos(lista);
+		
+		
 		
 		
 	}

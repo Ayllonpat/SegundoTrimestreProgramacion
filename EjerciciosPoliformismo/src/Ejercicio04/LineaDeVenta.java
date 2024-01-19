@@ -35,7 +35,7 @@ public class LineaDeVenta{
 	public void mostrarLinea() {
 		producto="Producto";
 		cantidad="Cantidad";
-		System.out.println(producto + "\t\t\t"+ cantidad);
+		System.out.println(producto + "\t\t\t"+ cantidad); //cuando cree en principal linea de venta hay q añadirlo como (p1, 2) (producto, cantidad) y los llamas en el array
 	}
 	
 	
