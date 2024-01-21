@@ -31,13 +31,19 @@ public class Principal {
 		
 		int tam=3;
 		
-		System.out.println(p1.calcularPrecio());
+		p1.calcularPrecio();
+		p2.calcularPrecio();
+		p3.calcularPrecio();
 		
-		ProductoGenerico[]lista = new ProductoGenerico[tam];
+		LineaDeVenta l1=new LineaDeVenta(p1, 2);
+		LineaDeVenta l2=new LineaDeVenta(p2, 3);
+		LineaDeVenta l3=new LineaDeVenta(p3, 1);
 		
-		lista[0]=p1;
-		lista[1]=p2;
-		lista[2]=p3;
+		LineaDeVenta[]lista = new LineaDeVenta[tam];
+		
+		lista[0]=l1;
+		lista[1]=l2;
+		lista[2]=l3;
 		
 		v.generarListaProduuctosVendidos(lista);
 		
