@@ -41,7 +41,7 @@ public class Vendedor extends Empleados{
 	@Override
 	public String toString() {
 		return super.toString()+ "Vendedor [cantidadVentas=" + cantidadVentas + ", porcentajeIcentivo=" + porcentajeIcentivo
-				+ ", totalVendido=" + totalVendido + "]" ;
+				+ ", totalVendido=" + totalVendido + ", sueldoFinal="+ calcularSueldo()+"]" ;
 	}
 	
 	public double calcularIcentivo() {

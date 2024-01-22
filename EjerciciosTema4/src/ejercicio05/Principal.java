@@ -20,6 +20,26 @@ public class Principal {
 			felicitar con un mensaje por pantalla cuando haya vendido más de una cantidad pasada como parámetro
 			que será su objetivo de ventas.
 		 */
+		
+		Oficina o=new Oficina();
+		
+		Empleados e1 = new Vendedor("Maria", "Martin", 1400, 1, 11, 11, 10000);
+		Empleados e2 = new Vendedor("David", "Ortega", 1400, 2, 9, 11, 9000);
+		Empleados e3 = new Gerente("Sofia", "Romano", 1600, 3, 15);
+		
+		int tam = 3;
+		
+		e1.calcularSueldo();
+		e2.calcularSueldo();
+		e3.calcularSueldo();
+		
+		Empleados[] lista= new Empleados[tam];
+		
+		lista[0]=e1;
+		lista[1]=e2;
+		lista[2]=e3;
+		
+		o.generarListaEmpleados(lista);
 
 	}
 
