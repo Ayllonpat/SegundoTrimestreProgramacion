@@ -63,7 +63,7 @@ public class Alimentacion extends ProductoGenerico{
 		return super.toString()+"Alimentacion [precioFinal=" + precioFinal + "]";
 	}
 
-	public void mostrarAviso() {
+	public void mostrarAviso() {//hay que castearlo en ventas
 		if(diasParaCaducar <= diasAviso) {
 			System.out.printf("A este producto solo le quedan %s para caducar", diasAviso);
 		}
