@@ -26,8 +26,8 @@ public class Principal {
 		 */
 		Venta v = new Venta();
 		ProductoGenerico p1=new Alimentacion(2.5, "macarrones", 345, 1, 5, 20, 2, 2);
-		ProductoGenerico p2=new Alimentacion(3.4, "arroz", 356, 1, 4, 0, 3, 2);
-		ProductoGenerico p3=new Electronica(45, "reloj", 567, 2, 1, 21);
+		ProductoGenerico p2=new Alimentacion(3.4, "arroz     ", 356, 1, 4, 0, 3, 2);
+		ProductoGenerico p3=new Electronica(45, "reloj     ", 567, 2, 1, 21);
 		
 		int tam=3;
 		
@@ -35,9 +35,9 @@ public class Principal {
 		p2.calcularPrecio();
 		p3.calcularPrecio();
 		
-		LineaDeVenta l1=new LineaDeVenta(p1, 2);
-		LineaDeVenta l2=new LineaDeVenta(p2, 3);
-		LineaDeVenta l3=new LineaDeVenta(p3, 1);
+		LineaDeVenta l1=new LineaDeVenta(p1, 0);
+		LineaDeVenta l2=new LineaDeVenta(p2, 0);
+		LineaDeVenta l3=new LineaDeVenta(p3, 0);
 		
 		LineaDeVenta[]lista = new LineaDeVenta[tam];
 		
@@ -45,7 +45,10 @@ public class Principal {
 		lista[1]=l2;
 		lista[2]=l3;
 		
+		System.out.println("Producto\tCantidad\tPrecio Unitario\t\tPrecio total");
+		System.out.println("--------------------------------------------------------------------");
 		v.generarListaProduuctosVendidos(lista);
+		System.out.println();
 		
 		
 		

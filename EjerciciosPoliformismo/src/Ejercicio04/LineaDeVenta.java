@@ -1,6 +1,6 @@
 package Ejercicio04;
 
-public class LineaDeVenta{
+public class LineaDeVenta {
 	
 	
 	private ProductoGenerico producto;
@@ -29,8 +29,9 @@ public class LineaDeVenta{
 
 	@Override
 	public String toString() {
-		return "LineaDeVenta [producto=" + producto + "\t\t cantidad=" + cantidad + "]";
+		return  producto+"\t";
 	}
+	
 	
 	/*public void mostrarLinea() {
 		producto="Producto";

@@ -60,7 +60,7 @@ public class Alimentacion extends ProductoGenerico{
 	
 	@Override
 	public String toString() {
-		return super.toString()+"Alimentacion [precioFinal=" + precioFinal + "]";
+		return super.toString()+"\t\t"+precioFinal;
 	}
 
 	public void mostrarAviso() {//hay que castearlo en ventas

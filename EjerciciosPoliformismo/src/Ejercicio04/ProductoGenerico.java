@@ -60,8 +60,7 @@ public abstract class ProductoGenerico {
 
 	@Override
 	public String toString() {
-		return "ProductoGenerico [precioUnitario=" + precioUnitario + ", nombreProducto=" + nombreProducto
-				+ ", codProducto=" + codProducto + ", codDepartamento=" + codDepartamento + cantidadAComprar +"]";
+		return   nombreProducto +"\t"+cantidadAComprar+"\t\t"+ precioUnitario+"\t";
 	}
 	
 	public abstract double calcularPrecio();

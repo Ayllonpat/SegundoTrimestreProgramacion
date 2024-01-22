@@ -21,7 +21,7 @@ public class Electronica extends ProductoGenerico{
 
 	@Override
 	public String toString() {
-		return super.toString()+"Electronica [precioFinal=" + precioFinal + "]";
+		return super.toString()+"\t\t"+precioFinal;
 	}
 
 	@Override
