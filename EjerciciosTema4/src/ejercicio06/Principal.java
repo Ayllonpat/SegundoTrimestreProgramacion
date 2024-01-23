@@ -1,5 +1,7 @@
 package ejercicio06;
 
+import ejercicio05.Oficina;
+
 public class Principal {
 
 	public static void main(String[] args) {
@@ -22,6 +24,9 @@ public class Principal {
 			Ampliación: Quien lo desee, puede plantearse alguna clase más, como la clase cliente que puede tener
 			varias cuentas o que en la clase Oficina también haya un atributo que sea la lista de Clientes.
 		 */
+		
+		Oficina o=new Oficina();
+
 
 	}
 

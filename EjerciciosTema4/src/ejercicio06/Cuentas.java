@@ -4,11 +4,13 @@ public abstract class Cuentas {
 
 	private double saldo;
 	private int tipo;
+	private int idCuenta;
 	
-	public Cuentas(double saldo, int tipo) {
+	public Cuentas(double saldo, int tipo, int idCuenta) {
 		super();
 		this.saldo = saldo;
 		this.tipo = tipo;
+		this.idCuenta = idCuenta;
 	}
 
 	public double getSaldo() {
@@ -27,11 +29,23 @@ public abstract class Cuentas {
 		this.tipo = tipo;
 	}
 
+	public int getIdCuenta() {
+		return idCuenta;
+	}
+
+	public void setIdCuenta(int idCuenta) {
+		this.idCuenta = idCuenta;
+	}
+
 	@Override
 	public String toString() {
-		return "Cuentas [saldo=" + saldo + ", tipo=" + tipo + "]";
+		return "Cuentas [saldo=" + saldo + ", tipo=" + tipo + ", idCuenta=" + idCuenta + "]";
 	}
 	
+	public abstract double elegirDineroOperacion();
+	
+	public abstract double elegirMantenimiento();
+
 	public abstract double ingresarDinero();
 	
 	public abstract double sacarDinero();
