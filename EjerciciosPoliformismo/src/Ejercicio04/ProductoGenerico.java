@@ -6,16 +6,15 @@ public abstract class ProductoGenerico {
 	private String nombreProducto;
 	private int codProducto;
 	private int codDepartamento;
-	private int cantidadAComprar;
 	
 	public ProductoGenerico(double precioUnitario, String nombreProducto, int codProducto, int codDepartamento,
-			int cantidadAComprar, double precioAlterado) {
+		 double precioAlterado) {
 		super();
 		this.precioUnitario = precioUnitario;
 		this.nombreProducto = nombreProducto;
 		this.codProducto = codProducto;
 		this.codDepartamento = codDepartamento;
-		this.cantidadAComprar = cantidadAComprar;
+
 	}
 
 	public double getPrecioUnitario() {
@@ -50,17 +49,9 @@ public abstract class ProductoGenerico {
 		this.codDepartamento = codDepartamento;
 	}
 
-	public int getCantidadAComprar() {
-		return cantidadAComprar;
-	}
-
-	public void setCantidadAComprar(int cantidadAComprar) {
-		this.cantidadAComprar = cantidadAComprar;
-	}
-
 	@Override
 	public String toString() {
-		return   nombreProducto +"\t"+cantidadAComprar+"\t\t"+ precioUnitario+"\t";
+		return   nombreProducto +"\t\t"+ precioUnitario+"€\t";
 	}
 	
 	public abstract double calcularPrecio();

@@ -7,9 +7,9 @@ public class Alimentacion extends ProductoGenerico{
 	private int diasAviso;
 	private double precioFinal;
 
-	public Alimentacion(double precioUnitario, String nombreProducto, int codProducto, int codDepartamento,int cantidadAComprar,
+	public Alimentacion(double precioUnitario, String nombreProducto, int codProducto, int codDepartamento,
 			double descuento, int diasParaCaducar, int diasAviso) {
-		super(precioUnitario, nombreProducto, codProducto, codDepartamento, cantidadAComprar, descuento);
+		super(precioUnitario, nombreProducto, codProducto, codDepartamento, descuento);
 		this.descuento = descuento;
 		this.diasParaCaducar = diasParaCaducar;
 		this.diasAviso = diasAviso;
@@ -46,12 +46,12 @@ public class Alimentacion extends ProductoGenerico{
 		double precioAlterado;
 		
 		if(diasParaCaducar <= diasAviso) {
-			precioAlterado = getPrecioUnitario() + descuento;
+			precioAlterado = getPrecioUnitario() + descuento;//hacerporcentaje
 		}else {
 			precioAlterado= getPrecioUnitario();
 		}
 		
-		precioFinal=precioAlterado*getCantidadAComprar();
+		precioFinal=precioAlterado;
 		
 		return precioFinal;
 	}
@@ -60,7 +60,7 @@ public class Alimentacion extends ProductoGenerico{
 	
 	@Override
 	public String toString() {
-		return super.toString()+"\t\t"+precioFinal;
+		return super.toString()+"\t\t";
 	}
 
 	public void mostrarAviso() {//hay que castearlo en ventas

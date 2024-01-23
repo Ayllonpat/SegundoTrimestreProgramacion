@@ -5,9 +5,9 @@ public class Electronica extends ProductoGenerico{
 	private double impuestos;
 	private double precioFinal;
 
-	public Electronica(double precioUnitario, String nombreProducto, int codProducto, int codDepartamento, int cantidadAComprar,
+	public Electronica(double precioUnitario, String nombreProducto, int codProducto, int codDepartamento, 
 			double impuestos) {
-		super(precioUnitario, nombreProducto, codProducto, codDepartamento, cantidadAComprar, impuestos);
+		super(precioUnitario, nombreProducto, codProducto, codDepartamento, impuestos);
 		this.impuestos = impuestos;
 	}
 
@@ -21,7 +21,7 @@ public class Electronica extends ProductoGenerico{
 
 	@Override
 	public String toString() {
-		return super.toString()+"\t\t"+precioFinal;
+		return super.toString()+"\t\t";
 	}
 
 	@Override
@@ -32,7 +32,7 @@ public class Electronica extends ProductoGenerico{
 		
 		precioAlterado = getPrecioUnitario() + (getPrecioUnitario()*(impuestos/cien));
 		
-		precioFinal=precioAlterado*getCantidadAComprar();
+		precioFinal=precioAlterado;
 		
 		return precioFinal;
 	}

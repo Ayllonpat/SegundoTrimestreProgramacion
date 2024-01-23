@@ -5,6 +5,7 @@ public class LineaDeVenta {
 	
 	private ProductoGenerico producto;
 	private int cantidad;
+	private double precioFinal;
 
 	public LineaDeVenta(ProductoGenerico producto, int cantidad ) {
 		this.producto = producto;
@@ -26,10 +27,27 @@ public class LineaDeVenta {
 	public void setCantidad(int cantidad) {
 		this.cantidad = cantidad;
 	}
+	
+	
+
+	public double getPrecioFinal() {
+		return precioFinal;
+	}
+
+	public void setPrecioFinal(double precioFinal) {
+		this.precioFinal = precioFinal;
+	}
 
 	@Override
 	public String toString() {
-		return  producto+"\t";
+		return  producto+""+cantidad+"\t\t\t"+precioFinal;
+	}
+	
+	public double calcularTotal() {
+		
+		precioFinal=producto.calcularPrecio()*cantidad;
+		
+		return precioFinal;
 	}
 	
 	
