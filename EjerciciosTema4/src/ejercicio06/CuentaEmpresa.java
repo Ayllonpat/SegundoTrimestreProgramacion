@@ -38,14 +38,22 @@ public class CuentaEmpresa extends Cuentas{
 	@Override
 	public double ingresarDinero() {
 		// TODO Auto-generated method stub
-		return getSaldo()+dineroOperacion;
+		super.setSaldo( getSaldo()+dineroOperacion);
+		return getSaldo();
 	}
 
 	@Override
 	public double sacarDinero() {
 		// TODO Auto-generated method stub
 		double uno=1;
-		return getSaldo()-dineroOperacion-uno;
+		super.setSaldo( getSaldo()-dineroOperacion-uno);
+		return getSaldo();
+	}
+
+	@Override
+	public double calcularSaldoMantenimiento() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 	
 	

@@ -60,20 +60,28 @@ public class CuentaCorriente extends Cuentas{
 	}
 	
 	public double calcularSaldoMantenimiento() {
-		return getSaldo()-mantenimientoFijo;
+		super.setSaldo(getSaldo()-mantenimientoFijo);
+		return getSaldo();
+	}
+	
+	public double calcularDespuesMan() {
+		return getSaldo();
+		
 	}
 
 	@Override
 	public double ingresarDinero() {
 		sumarPuntos();
-		return calcularSaldoMantenimiento()+dineroOperacion;
+		super.setSaldo(calcularDespuesMan()+dineroOperacion);
+		return getSaldo();
 	}
 
 	@Override
 	public double sacarDinero() {
 		// TODO Auto-generated method stub
 		sumarPuntos();
-		return calcularSaldoMantenimiento()-dineroOperacion;
+		super.setSaldo(calcularDespuesMan()-dineroOperacion);
+		return getSaldo();
 	}
 	
 	public double sumarPuntos() {

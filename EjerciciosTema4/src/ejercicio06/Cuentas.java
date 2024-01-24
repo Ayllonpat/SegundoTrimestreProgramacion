@@ -49,5 +49,7 @@ public abstract class Cuentas {
 	public abstract double ingresarDinero();
 	
 	public abstract double sacarDinero();
+
+	public abstract double  calcularSaldoMantenimiento();
 	
 }

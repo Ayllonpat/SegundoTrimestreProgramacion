@@ -25,8 +25,41 @@ public class Principal {
 			varias cuentas o que en la clase Oficina también haya un atributo que sea la lista de Clientes.
 		 */
 		
-		Oficina o=new Oficina();
+		int tam=3;
+		
+		Cuentas c1=new CuentaCorriente(9000, 1, 1111, 10);
+		Cuentas c2=new CuentaJoven(2000, 2, 1112);
+		Cuentas c3=new CuentaEmpresa(20000, 3, 1113);
 
+		
+		Cuentas[] listaDeCuentas = new Cuentas[tam];
+		
+		listaDeCuentas[0]=c1;
+		listaDeCuentas[1]=c2;
+		listaDeCuentas[2]=c3;
+		
+		Ofinina o=new Ofinina(listaDeCuentas);
+		
+		//o.generarListaCuentas();
+		
+		o.generarListaCuentas(listaDeCuentas);
+		System.out.println("--------------------------------");
+		System.out.println(c1.elegirDineroOperacion());
+		System.out.println(c1.elegirMantenimiento());
+		System.out.println(c1.calcularSaldoMantenimiento());
+		System.out.println(c1.ingresarDinero());
+		c1.ingresarDinero();
+		c1.sacarDinero();
+		System.out.println(c1);
+		System.out.println("----------------------------------");
+		System.out.println(c2.elegirDineroOperacion());
+		System.out.println(c2.ingresarDinero());
+		System.out.println(c2.sacarDinero());
+		System.out.println(c2);
+		System.out.println("----------------------------------");
+		System.out.println(c3.elegirDineroOperacion());
+		System.out.println(c3.sacarDinero());
+		System.out.println(c3);
 
 	}
 
