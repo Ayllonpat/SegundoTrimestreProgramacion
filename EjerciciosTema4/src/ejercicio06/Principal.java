@@ -60,6 +60,8 @@ public class Principal {
 		System.out.println(c3.elegirDineroOperacion());
 		System.out.println(c3.sacarDinero());
 		System.out.println(c3);
+		System.out.println("----------------------------------");
+		o.calcularDineroBnaco(listaDeCuentas);
 
 	}
 

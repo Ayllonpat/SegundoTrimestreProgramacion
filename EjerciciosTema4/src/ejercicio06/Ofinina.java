@@ -1,7 +1,5 @@
 package ejercicio06;
 
-
-
 public class Ofinina {
 	
 	private Cuentas[]listaDeCuentas;
@@ -43,6 +41,16 @@ public class Ofinina {
 		}
 	}
 		
+	public void calcularDineroBnaco(Cuentas[]listaDeCuentas) {
+		
+		double precioTotal=0;
+		
+		for(int i = 0;i<listaDeCuentas.length;i++) {
+			precioTotal=precioTotal+listaDeCuentas[i].getSaldo();
+		}
+		System.out.printf("El banco tiene un total de "+ precioTotal);
+	}
+	
 	
 }
 
