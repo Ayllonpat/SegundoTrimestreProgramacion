@@ -44,9 +44,9 @@ public class ArrayReales implements IEstadisticas{
 		// TODO Auto-generated method stub
 		for(int i=0;i<num.length;i++) {
 			if(i==0) {
-				min=i;
-			}else if(i<=min) {
-				min=i;
+				min=num[i].getNum();
+			}if(i>=min) {
+				min=num[i].getNum();
 			}
 		}
 		return min;
@@ -59,9 +59,9 @@ public class ArrayReales implements IEstadisticas{
 		// TODO Auto-generated method stub
 		for(int i=0;i<num.length;i++) {
 			if(i==0) {
-				max=i;
-			}else if(i>=max) {
-				max=i;
+				max=num[i].getNum();
+			}if(i<=max) {
+				max=num[i].getNum();
 			}
 		}
 		return max;
