@@ -43,7 +43,7 @@ public class ArrayReales implements IEstadisticas{
 		double min = 0;
 		// TODO Auto-generated method stub
 		for(int i=0;i<num.length;i++) {
-			if(i==0) {
+			if(i==min) {
 				min=i;
 			}else if(i<=min) {
 				min=i;
@@ -58,7 +58,7 @@ public class ArrayReales implements IEstadisticas{
 		double max = 0;
 		// TODO Auto-generated method stub
 		for(int i=0;i<num.length;i++) {
-			if(i==0) {
+			if(i!=max) {
 				max=i;
 			}else if(i>=max) {
 				max=i;
