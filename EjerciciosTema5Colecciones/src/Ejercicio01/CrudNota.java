@@ -33,15 +33,28 @@ public class CrudNota {
 				encontrado = true;}
 			else i++;
 		}
-		if(encontrado)
+		if(encontrado) {
+			System.out.println(lista.get(i));
 			return lista.get(i);
-		else
-			return null;
+		}else {
+			return null;}
 	}
 	
 	public void mostrar() {
 		for (Nota n: lista) {
 			System.out.println(n);
+		}
+	}
+	
+	public void agregar(Nota n) {
+		lista.add(n);
+	}
+	
+	public void borrar(int id) {
+		if(findById(id)!=null) {
+			lista.remove(findById(id));
+		}else {
+			System.out.println("No se ha encontrado");
 		}
 	}
 
