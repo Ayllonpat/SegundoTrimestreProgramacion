@@ -43,10 +43,17 @@ public class ArrayReales implements IEstadisticas{
 		double min = 0;
 		// TODO Auto-generated method stub
 		for(int i=0;i<num.length;i++) {
+<<<<<<< HEAD
+			if(i==min) {
+				min=i;
+			}else if(i<=min) {
+				min=i;
+=======
 			if(i==0) {
 				min=num[i].getNum();
 			}if(i>=min) {
 				min=num[i].getNum();
+>>>>>>> 770393cea704b1939e13ff4c584b8cff8a9530af
 			}
 		}
 		return min;
@@ -58,10 +65,17 @@ public class ArrayReales implements IEstadisticas{
 		double max = 0;
 		// TODO Auto-generated method stub
 		for(int i=0;i<num.length;i++) {
+<<<<<<< HEAD
+			if(i!=max) {
+				max=i;
+			}else if(i>=max) {
+				max=i;
+=======
 			if(i==0) {
 				max=num[i].getNum();
 			}if(i<=max) {
 				max=num[i].getNum();
+>>>>>>> 770393cea704b1939e13ff4c584b8cff8a9530af
 			}
 		}
 		return max;
