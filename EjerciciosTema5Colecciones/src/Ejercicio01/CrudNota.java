@@ -34,8 +34,7 @@ public class CrudNota {
 			else i++;
 		}
 		if(encontrado) {
-			System.out.println(lista.get(i));
-			return lista.get(i);
+			return lista.get(i);	
 		}else {
 			return null;}
 	}
@@ -46,16 +45,23 @@ public class CrudNota {
 		}
 	}
 	
+	public int calcularTamanioLista() {
+		return lista.size();
+	}
+	
 	public void agregar(Nota n) {
 		lista.add(n);
 	}
 	
-	public void borrar(int id) {
-		if(findById(id)!=null) {
+	public void borrar(int id) {//no se imprime nunca si hace algo
+		if(!lista.isEmpty()){
 			lista.remove(findById(id));
-		}else {
-			System.out.println("No se ha encontrado");
 		}
 	}
-
+	public String modificarTitulo(int id, String titulo) {
+		if(findById(id) != null) {
+			titulo=findById(id).getTitulo();
+		}
+		return titulo;
+	}
 }

@@ -27,7 +27,7 @@ public class Principal {
 		CrudNota cn=new CrudNota(lista);
 		
 		int opcion=0, id = 0;
-		String aux, texto, titulo;
+		String aux, texto, titulo = null;
 		
 		lista.add(new Nota("Holi", 0, "Saludos"));
 		lista.add(new Nota("Adios",1, "Despedidas"));
@@ -42,6 +42,8 @@ public class Principal {
 				2.Agregar nota
 				3.Buscar nota
 				4.Borrar nota
+				5.Mostar número notas
+				6.Cambiar un título
 				0.Salir
 				---------------------------------------------------
 				Elija:
@@ -78,16 +80,27 @@ public class Principal {
 			System.out.println("Indique la id de la nota a buscar:");
 			aux=sc.nextLine();
 			id=Integer.parseInt(aux);
-			cn.findById(id);
+			System.out.println(cn.findById(id));
 			break;
 		case 4:
 			cn.mostrar();
 			System.out.println("Indique la id de la nota a borrar");
 			aux=sc.nextLine();
 			id=Integer.parseInt(aux);
-			cn.findById(id);
+			cn.borrar(id);
 			break;
-			
+		case 5:
+			System.out.println(cn.calcularTamanioLista());
+			break;
+		case 6:
+			System.out.println("Indique la id de la nota que desea cambiar:");
+			aux=sc.nextLine();
+			id=Integer.parseInt(aux);
+			System.out.println("Indique el titulo a cambiar");
+			titulo=sc.nextLine();
+			cn.modificarTitulo(id, titulo);
+			System.out.println(cn.findById(id));
+			break;
 		default:
 			System.out.println("OPCION NO DISPONIBLE");
 			break;
