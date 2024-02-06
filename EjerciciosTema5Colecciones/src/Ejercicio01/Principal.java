@@ -27,7 +27,7 @@ public class Principal {
 		CrudNota cn=new CrudNota(lista);
 		
 		int opcion=0, id = 0;
-		String aux, texto, titulo = null;
+		String aux, texto, titulo;
 		
 		lista.add(new Nota("Holi", 0, "Saludos"));
 		lista.add(new Nota("Adios",1, "Despedidas"));
@@ -97,7 +97,7 @@ public class Principal {
 			aux=sc.nextLine();
 			id=Integer.parseInt(aux);
 			System.out.println("Indique el titulo a cambiar");
-			titulo=sc.nextLine();
+			titulo= sc.nextLine();
 			cn.modificarTitulo(id, titulo);
 			System.out.println(cn.findById(id));
 			break;

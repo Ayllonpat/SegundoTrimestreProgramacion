@@ -61,7 +61,8 @@ public class CrudNota {
 	public String modificarTitulo(int id, String titulo) {
 		if(findById(id) != null) {
 			titulo=findById(id).getTitulo();
+			
 		}
-		return titulo;
+		return findById(id).getTitulo();
 	}
 }
