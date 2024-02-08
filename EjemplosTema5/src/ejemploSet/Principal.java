@@ -41,6 +41,7 @@ public class Principal {
 		
 		System.out.println(listado);
 		
+<<<<<<< HEAD
 		System.out.println("Indique el dni de la persona que desea borrar:");
 		dni=sc.nextLine();
 		
@@ -48,6 +49,13 @@ public class Principal {
 		
 		System.out.println(listado);
 		
+=======
+		Crud c=new Crud(listado);
+		
+		String dni="123a";
+		
+		System.out.println(c.buscar(dni));
+>>>>>>> 2d18832825a2b345c737f2eb9ba0f725351d6a5d
 	}
 
 }
