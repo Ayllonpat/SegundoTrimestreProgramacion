@@ -30,6 +30,12 @@ public class Principal {
 		listado.add(new Persona("Miguel", 67, "123e"));
 		
 		System.out.println(listado);
+		
+		Crud c=new Crud(listado);
+		
+		String dni="123a";
+		
+		System.out.println(c.buscar(dni));
 	}
 
 }

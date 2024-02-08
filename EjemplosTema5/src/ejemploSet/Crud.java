@@ -1,5 +1,6 @@
 package ejemploSet;
 
+import java.util.HashSet;
 import java.util.Set;
 
 public class Crud {
@@ -26,16 +27,15 @@ public class Crud {
 	
 	public Set<Persona> buscar(String dni) {
 		boolean encontrado = false;
-		
+		boolean deLista=((Persona) listado).get(dni);
 		while(listado.contains(dni)) {
-			encontrado=true;
-		}
+			encontrado=true;}
+		
 		if(encontrado){
-			return null;
+			return listado;
 		}else {
 			return null;
-		}
+			}
+		
 	}
-	
-	
 }
