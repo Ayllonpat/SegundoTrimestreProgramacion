@@ -1,10 +1,14 @@
 package ejemploSet;
 
+import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 
 public class Crud {
+	
+	
 
-	private Set <Persona> listado;
+	private Set<Persona> listado;
 
 	public Crud(Set<Persona> listado) {
 		super();
@@ -23,18 +27,15 @@ public class Crud {
 	public String toString() {
 		return "Crud [listado=" + listado + "]";
 	}
+
 	
-	public Set<Persona> buscar(String dni) {
-		boolean encontrado = false;
+	public void borrar(String dni, Iterator<Persona> it) {
 		
-		while(listado.contains(dni)) {
-			encontrado=true;
+	
+		if(listado.contains(dni)) {
+			listado.remove(it.hasNext());
 		}
-		if(encontrado){
-			return null;
-		}else {
-			return null;
-		}
+	
 	}
 	
 	

@@ -58,11 +58,11 @@ public class CrudNota {
 			lista.remove(findById(id));
 		}
 	}
-	public String modificarTitulo(int id, String titulo) {
+	public Nota modificarTitulo(int id, String titulo) {
 		if(findById(id) != null) {
 			titulo=findById(id).getTitulo();
 			
 		}
-		return findById(id).getTitulo();
+		return findById(id);
 	}
 }
