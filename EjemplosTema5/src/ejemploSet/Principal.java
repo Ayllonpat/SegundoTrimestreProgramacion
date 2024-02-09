@@ -13,13 +13,6 @@ public class Principal {
 		Scanner sc= new Scanner(System.in);
 		
 		Set <String> lista = new HashSet <>();
-		Set <Persona> listado = new HashSet <>();
-		Iterator<Persona> it= listado.iterator();
-		
-		String dni;
-		
-		Crud c=new Crud(listado);
-				
 		
 		lista.add("Uno");
 		lista.add("Dos");
@@ -34,28 +27,7 @@ public class Principal {
 		System.out.println(lista);
 		
 		System.out.println(lista.contains("UNO")); //comprueba si se encuentra
-		
-		listado.add(new Persona("Angel", 34, "123a"));
-		listado.add(new Persona("Maria", 37, "123b"));
-		listado.add(new Persona("Miguel", 67, "123e"));
-		
-		System.out.println(listado);
-		
-<<<<<<< HEAD
-		System.out.println("Indique el dni de la persona que desea borrar:");
-		dni=sc.nextLine();
-		
-		c.borrar(dni, it);
-		
-		System.out.println(listado);
-		
-=======
-		Crud c=new Crud(listado);
-		
-		String dni="123a";
-		
-		System.out.println(c.buscar(dni));
->>>>>>> 2d18832825a2b345c737f2eb9ba0f725351d6a5d
+				
 	}
 
 }
