@@ -1,0 +1,8 @@
+/**
+ * 
+ */
+/**
+ * 
+ */
+module Examen4TipoBPatriciaAlonsoAyllón {
+}
