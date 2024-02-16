@@ -2,61 +2,74 @@ package ejercicio02;
 
 public class Socios {
 	
-	private String nombre;
-	private String apellidos;
-	private int edad;
-	private String dni;
-	private double cuota;
+	//Atributos
 	
-	public Socios(String nombre, String apellidos, int edad, String dni, double cuota) {
-		super();
-		this.nombre = nombre;
-		this.apellidos = apellidos;
-		this.edad = edad;
-		this.dni = dni;
-		this.cuota = cuota;
-	}
-	
-	public String getNombre() {
-		return nombre;
-	}
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-	public String getApellidos() {
-		return apellidos;
-	}
-	public void setApellidos(String apellidos) {
-		this.apellidos = apellidos;
-	}
-	public int getEdad() {
-		return edad;
-	}
-	public void setEdad(int edad) {
-		this.edad = edad;
-	}
-	public String getDni() {
-		return dni;
-	}
-	public void setDni(String dni) {
-		this.dni = dni;
-	}
+		private String nombre;
+		private String apellidos;
+		private String dni;
+		private boolean veterano;
+		
 
-	public double getCuota() {
-		return cuota;
-	}
+		
+		//Constructor
+		
+		public Socios(String nombre, String apellidos, String dni, boolean veterano) {
+			super();
+			this.nombre = nombre;
+			this.apellidos = apellidos;
+			this.dni = dni;
+			this.veterano = veterano;
+		}
 
-	public void setCuota(double cuota) {
-		this.cuota = cuota;
-	}
+		
+		//Getters and Setters
 
-	@Override
-	public String toString() {
-		return "Socios [nombre=" + nombre + ", apellidos=" + apellidos + ", edad=" + edad + ", dni=" + dni + ", cuota="
-				+ cuota + "]";
-	}
-	
-	
-	
+		public String getNombre() {
+			return nombre;
+		}
 
+
+		public void setNombre(String nombre) {
+			this.nombre = nombre;
+		}
+
+
+		public String getApellidos() {
+			return apellidos;
+		}
+
+
+		public void setApellidos(String apellidos) {
+			this.apellidos = apellidos;
+		}
+
+
+		public String getDni() {
+			return dni;
+		}
+
+
+		public void setDni(String dni) {
+			this.dni = dni;
+		}
+		
+		public boolean isVeterano() {
+			
+			return veterano;
+		}
+		
+		public void setVeterano (boolean veterano) {
+			
+			this.veterano = veterano;
+		}
+
+
+
+
+		//toString
+		
+		@Override
+		public String toString() {
+			return "Socio [nombre=" + nombre + ", apellidos=" + apellidos + ", dni=" + dni + ", veterano=" + veterano + "]";
+		}
 }

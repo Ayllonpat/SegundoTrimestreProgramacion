@@ -1,8 +1,6 @@
 package metodosPrivadosYDefault;
 
-public class Profesor extends Persona implements ITrabajador, IColegio{
-	
-	private String asignatura;
+public class Practicante extends Persona implements IEstudios, ITrabajador, IColegio{
 
 	@Override
 	public void entrarColegio() {
