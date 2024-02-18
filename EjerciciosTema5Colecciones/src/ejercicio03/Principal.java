@@ -28,12 +28,19 @@ public class Principal {
 		double hasta=10;
 		double desde=0;
 		double notaRandom;
+		String nombre;
+		String apellidos;
+		int edad;
+		int curso;
+		String letra;
+		
 		
 		listaAlumnos.add(new Alumnos("Maria", "López", 15, 4, "C", 1));
 		listaAlumnos.add(new Alumnos("Fabian", "Snachez", 16, 4, "C", 2));
 		listaAlumnos.add(new Alumnos("Adam", "López", 15, 4, "A", 3));
 		
 		CrudAlumno ca=new CrudAlumno(listaAlumnos);
+		
 		
 		do {
 			
@@ -77,6 +84,7 @@ public class Principal {
 						-----------------------------------------------
 							1.Base de Datos
 							2.Programación
+							0.Atrás
 						-----------------------------------------------
 						""");
 					switch(opcion) {
@@ -107,9 +115,30 @@ public class Principal {
 				break;
 			
 			case 6:
+				System.out.println("Introduzca el nombre:");
+				nombre=sc.nextLine();
+				System.out.println("Introduzca los apellidos:");
+				apellidos=sc.nextLine();
+				System.out.println("Introduzca la edad:");
+				aux=sc.nextLine();
+				edad=Integer.parseInt(aux);
+				System.out.println("Introduzca el curso:");
+				aux=sc.nextLine();
+				curso=Integer.parseInt(aux);
+				System.out.println("Introduzca la letra:");
+				letra=sc.nextLine();
+				System.out.println("Escriba la id:");
+				aux=sc.nextLine();
+				id=Integer.parseInt(aux);
+				Alumnos a=new Alumnos(nombre, apellidos, edad, curso, letra, id);
+				ca.agregarAlumno(a);
+				
 				break;
 				
 			case 7:
+				System.out.println("Escriba la id:");
+				aux=sc.nextLine();
+				id=Integer.parseInt(aux);
 				break;
 				
 			case 0:

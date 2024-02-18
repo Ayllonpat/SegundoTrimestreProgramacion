@@ -49,5 +49,13 @@ public class CrudAlumno {
 		notaPro=notaRandom;
 		return notaPro;
 	}
+	
+	public void agregarAlumno(Alumnos a) {
+		listaAlumnos.add(a);
+	}
+	
+	public void eliminarAlumno(Alumnos a) {
+		listaAlumnos.remove(a);
+	}
 
 }
