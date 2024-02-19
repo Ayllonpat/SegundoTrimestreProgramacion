@@ -1,7 +1,7 @@
 package ejercicio03;
 
 import java.util.Iterator;
-import java.util.Set;
+import java.util.Set;import java.util.function.Consumer;
 
 public class CrudAlumno {
 	
@@ -30,22 +30,32 @@ public class CrudAlumno {
 	public Alumnos buscarAlumno(int id) {
 		
 		Iterator<Alumnos> it = listaAlumnos.iterator();
+		Alumnos a=null;
 		
-		if(it.next().contains(id)) {
-			return it.next();
-		}else {
-			return null;
-		}
+		boolean encontrado=false;
+		
+		while (it.hasNext() && !encontrado) {
+			a=it.next();
+			if(a.getId()==id) {
+				encontrado= true;
+			}
+					
+		}return a;
+		
 	}
 
-	public double generarNotaBD(double notaRandom){
+	public double generarNotaBD(double notaRandom, int id){
 		double notaBD;
+		Alumnos a;
+		a=buscarAlumno(id);
 		notaBD=notaRandom;
 		return notaBD;
 	}
 	
-	public double generarNotaPro(double notaRandom) {
+	public double generarNotaPro(double notaRandom, int id) {
 		double notaPro;
+		Alumnos a;
+		a=buscarAlumno(id);
 		notaPro=notaRandom;
 		return notaPro;
 	}
@@ -54,8 +64,16 @@ public class CrudAlumno {
 		listaAlumnos.add(a);
 	}
 	
-	public void eliminarAlumno(Alumnos a) {
+	public void eliminarAlumno(int id) {
+		Alumnos a;
+		a=buscarAlumno(id);
 		listaAlumnos.remove(a);
+	}
+	
+	public void verAlumnos() {
+		for(Alumnos alumnos: listaAlumnos) {
+			System.out.println(alumnos);
+		}
 	}
 
 }

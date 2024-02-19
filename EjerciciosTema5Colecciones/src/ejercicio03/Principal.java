@@ -27,12 +27,14 @@ public class Principal {
 		int id;
 		double hasta=10;
 		double desde=0;
-		double notaRandom;
+		double notaRandom = 0;
 		String nombre;
 		String apellidos;
 		int edad;
 		int curso;
 		String letra;
+		int notaBD = 0;
+		int notaPro = 0;
 		
 		
 		listaAlumnos.add(new Alumnos("Maria", "López", 15, 4, "C", 1));
@@ -67,7 +69,7 @@ public class Principal {
 			switch(opcion) {
 			
 			case 1:
-				System.out.println(listaAlumnos);
+				ca.verAlumnos();
 				break;
 			
 			case 2:
@@ -87,14 +89,25 @@ public class Principal {
 							0.Atrás
 						-----------------------------------------------
 						""");
+				aux=sc.nextLine();
+				opcion=Integer.parseInt(aux);
 					switch(opcion) {
 						case 1:
 							System.out.println("Indique la id del alumno:");
 							notaRandom=rnd.nextDouble(hasta-desde+1)+desde;
-							
+							aux=sc.nextLine();
+							id=Integer.parseInt(aux);
+							ca.generarNotaBD(notaRandom, id);
+						System.out.println(notaBD);
 							break;
 						
 						case 2:
+							System.out.println("Indique la id del alumno:");
+							notaRandom=rnd.nextDouble(hasta-desde+1)+desde;
+							aux=sc.nextLine();
+							id=Integer.parseInt(aux);
+							ca.generarNotaPro(notaRandom, id);
+							System.out.println(notaPro);
 							break;
 							
 						case 0:
@@ -109,6 +122,7 @@ public class Principal {
 				break;
 			
 			case 4:
+				
 				break;
 				
 			case 5:
@@ -139,6 +153,7 @@ public class Principal {
 				System.out.println("Escriba la id:");
 				aux=sc.nextLine();
 				id=Integer.parseInt(aux);
+				ca.eliminarAlumno(id);
 				break;
 				
 			case 0:
