@@ -3,10 +3,12 @@ package examenEjemplo;
 public class Vehiculo implements IAparcamiento{
 	
 	private int minsEstacionado;
+	private String matricula;
 
-	public Vehiculo(int minsEstacionado) {
+	public Vehiculo(int minsEstacionado, String matricula) {
 		super();
 		this.minsEstacionado = minsEstacionado;
+		this.matricula = matricula;
 	}
 
 	public int getMinsEstacionado() {
@@ -17,10 +19,15 @@ public class Vehiculo implements IAparcamiento{
 		this.minsEstacionado = minsEstacionado;
 	}
 
-	@Override
-	public String toString() {
-		return "Vehiculo [minsEstacionado=" + minsEstacionado + "]";
+	public String getMatricula() {
+		return matricula;
 	}
+
+	public void setMatricula(String matricula) {
+		this.matricula = matricula;
+	}
+
+
 
 	@Override
 	public double calcularPrecio(double precioMin, double limiteFurgo, double limiteCmCubMotos,

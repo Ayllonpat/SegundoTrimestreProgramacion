@@ -36,5 +36,25 @@ public class Parking {
 			System.out.println(lista[i]);
 		}
 	}
+	
+	public void buscar(String matricula) {
+		Vehiculo vehiculo = null;
+		for(int i=0;i<lista.length;i++) {
+			
+			if(lista[i].getMatricula().equals(matricula)) {
+				vehiculo=lista[i];
+				System.out.println(vehiculo);
+			}
+		}
+	}
+	
+	public double calcularPrecio(String matricula, double precioMin, double limiteFurgo, double limiteCmCubMotos,
+			double cantPorMetro, double numDiv) {
+		double precio;
+		Vehiculo vehiculo = null;
+		buscar(matricula);
+		precio=vehiculo.calcularPrecio(precioMin, limiteFurgo, limiteCmCubMotos, cantPorMetro, numDiv);
+		return precio;
+	}
 
 }

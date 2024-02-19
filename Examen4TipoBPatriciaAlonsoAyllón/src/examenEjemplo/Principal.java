@@ -18,13 +18,16 @@ public class Principal {
 		double numDiv=2;
 		double sumaNavidad=20;
 		String aux;
+		String matricula;
 		
-		Vehiculo v1=new Furgonetas(120, 5.5);
-		Vehiculo v2=new Furgonetas(75, 3.4);
-		Vehiculo v3=new Motos(180, 230);
-		Vehiculo v4=new Motos(85, 260);
-		Vehiculo v5=new Vehiculo(35);
-		Vehiculo v6=new Furgonetas(140, 8.5);
+		Vehiculo vehiculo = null;
+		Vehiculo v1=new Furgonetas(120, "1111AAA", 5.5);
+		Vehiculo v2=new Furgonetas(75, "2222BBB", 3.4);
+		Vehiculo v3=new Furgonetas(140, "3333CCC", 8.5);
+		Vehiculo v4=new Motos(180, "4444DDD", 230);
+		Vehiculo v5=new Motos(85, "5555EEE", 260);
+		Vehiculo v6=new Vehiculo(35, "6666FFF");
+		
 		
 		Vehiculo []lista=new Vehiculo[tam];
 		lista[0]=v1;
@@ -53,10 +56,18 @@ public class Principal {
 				p.mostrarLista();
 				break;
 			case 2:
+				System.out.println("Indique la matrícula del vehiculo deseado:");
+				matricula=sc.nextLine();
+				p.calcularPrecio(matricula, precioMin, limiteFurgo, limiteCmCubMotos, cantPorMetro, numDiv);
 				break;
 			case 3:
 				break;
 			case 4:
+				break;
+			case 5:
+				matricula=sc.nextLine();
+				p.buscar(matricula);
+				System.out.println(p.buscar(matricula));
 				break;
 			case 0:
 				System.out.println("Saliendo...");

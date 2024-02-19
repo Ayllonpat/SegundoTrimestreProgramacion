@@ -2,8 +2,8 @@ package ejercicio04;
 
 import java.util.Iterator;
 import java.util.Map;
-
-import ejercicio02.Socios;
+import java.util.Map.Entry;
+import java.util.Set;
 
 public class AgendaCrud {
 
@@ -31,16 +31,31 @@ public class AgendaCrud {
 		System.out.println(listaContactos);
 	}
 	
-	public void buscarContactoPorNombre(String nombre) {
+	public Entry <Contactos, Telefonos> buscarContactoPorNombre (String nombre) {
+		
+		Set <Entry <Contactos, Telefonos>> setContactos = listaContactos.entrySet();
+		
+		Iterator <Entry <Contactos, Telefonos>> it = setContactos.iterator();
+		boolean encontrado = false;
+		
+		Entry <Contactos, Telefonos> entryContactos = null;
+		
+		while (it.hasNext() && !encontrado) {
 			
-		Contactos c = null;
-		boolean encontrado=false;
-		
-		while (listaContactos.containsKey(nombre)) {
-			encontrado=listaContactos.get(c).equals(nombre);
-		
+			entryContactos = it.next();
+			
+			if (entryContactos.getKey().getNombre().equals(nombre)) {
+				
+				encontrado = true;
+			}
 		}
 		
+		return entryContactos;
 	}
 	
+	public void borrarContacto(Entry <Contactos, Telefonos> entryContactos, String nombre) {
+
+		listaContactos.entrySet().remove(entryContactos);
+	}
+
 }

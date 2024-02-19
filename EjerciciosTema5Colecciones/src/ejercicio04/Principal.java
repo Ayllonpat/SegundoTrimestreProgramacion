@@ -3,6 +3,7 @@ package ejercicio04;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Scanner;
 import java.util.Set;
 
@@ -41,6 +42,7 @@ public class Principal {
 		listaContactos.put(c3, t3);
 		
 		AgendaCrud ac=new AgendaCrud(listaContactos);
+	
 		
 		do {
 		
@@ -65,9 +67,14 @@ public class Principal {
 		switch(opcion) {
 		
 		case 1:
+			System.out.println();
 			break;
 			
 		case 2:
+			
+			System.out.println("Escriba el contacto a borrar:");
+			nombre=sc.nextLine();
+			ac.borrarContacto(c, nombre);
 			break;
 			
 		case 3:
@@ -77,6 +84,7 @@ public class Principal {
 		case 4:
 			System.out.println("Escriba el contacto a buscar:");
 			nombre=sc.nextLine();
+			System.out.println(ac.buscarContactoPorNombre(nombre));
 			break;
 			
 		case 5:

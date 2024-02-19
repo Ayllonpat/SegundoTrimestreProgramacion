@@ -4,8 +4,8 @@ public class Furgonetas extends Vehiculo{
 		
 	private double longitud;
 
-	public Furgonetas(int minsEstacionado, double longitud) {
-		super(minsEstacionado);
+	public Furgonetas(int minsEstacionado, String matricula, double longitud) {
+		super(minsEstacionado, matricula);
 		this.longitud = longitud;
 	}
 
@@ -22,7 +22,7 @@ public class Furgonetas extends Vehiculo{
 		return super.toString()+"Furgonetas [longitud=" + longitud + "]";
 	}
 	
-	public double calcularPrecio(double precioMin, double limiteFurgo, double limiteCmCubMotos,
+	public double calcularPrecio(String matricula, Vehiculo vehiculo, double precioMin, double limiteFurgo, double limiteCmCubMotos,
 			double cantPorMetro, double numDiv) {
 		double total;
 		if(longitud>limiteFurgo){

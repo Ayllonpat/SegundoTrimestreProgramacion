@@ -4,8 +4,8 @@ public class Motos extends Vehiculo{
 	
 	private double cmCubicos;
 
-	public Motos(int minsEstacionado, double cmCubicos) {
-		super(minsEstacionado);
+	public Motos(int minsEstacionado, String matricula, double cmCubicos) {
+		super(minsEstacionado, matricula);
 		this.cmCubicos = cmCubicos;
 	}
 
