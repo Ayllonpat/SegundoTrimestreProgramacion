@@ -24,7 +24,12 @@ public class Principal {
 		
 		String aux;
 		String nombre;
+		String nuevoNombre;
+		int telefono;
+		int nuevoTelefono;
 		int opcion;
+		int opcion2;
+		
 		
 		Contactos c1=new Contactos("Maria");
 		Contactos c2=new Contactos("Patty");
@@ -67,14 +72,21 @@ public class Principal {
 		switch(opcion) {
 		
 		case 1:
-			System.out.println();
+			System.out.println("Indique el nombre del contacto:");
+			nombre=sc.nextLine();
+			System.out.println("Indique el número de telefono:");
+			aux=sc.nextLine();
+			telefono=Integer.parseInt(aux);
+			Contactos nombreC=new Contactos(nombre);
+			Telefonos telefonoN=new Telefonos(telefono);
+			ac.agregarNuevoContacto(nombreC, telefonoN);
 			break;
 			
 		case 2:
 			
 			System.out.println("Escriba el contacto a borrar:");
 			nombre=sc.nextLine();
-			ac.borrarContacto(c, nombre);
+			ac.borrarContacto(nombre);
 			break;
 			
 		case 3:
@@ -88,6 +100,44 @@ public class Principal {
 			break;
 			
 		case 5:
+			
+			do {
+				System.out.println("""
+						---------------------------------
+						Elija que desea hacer:
+							1.Editar nombre
+							2.Editar número
+							0.Salir
+						---------------------------------
+						""");
+				aux=sc.nextLine();
+				opcion2=Integer.parseInt(aux);
+				switch(opcion2) {
+				case 1:
+					System.out.println("Elija el contacto que desea editar:");
+					nombre=sc.nextLine();
+					System.out.println("Elija el nuevo nombre:");
+					nuevoNombre=sc.nextLine();
+					ac.editarNombre(nombre, nuevoNombre);
+					break;
+				case 2:
+					System.out.println("Elija el contacto que desea editar:");
+					nombre=sc.nextLine();
+					System.out.println("Elija el nuevo telefono:");
+					aux=sc.nextLine();
+					nuevoTelefono=Integer.parseInt(aux);
+					ac.editarTelefono(nombre, nuevoTelefono);
+					break;
+				case 0:
+					System.out.println("Saliendo..");
+					break;
+					
+				default:
+					System.out.println("OPCIÓN NO DISPONIBLE");
+					break;
+				}
+			}while(opcion2!=0);
+			
 			break;
 			
 		case 0:
@@ -101,6 +151,12 @@ public class Principal {
 		}
 		
 		}while(opcion!=0);
+		
+		System.out.println("""
+				---------------------------------
+				Gracias por su atención
+				---------------------------------
+				""");
 	}
 
 }

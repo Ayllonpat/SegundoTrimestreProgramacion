@@ -53,9 +53,25 @@ public class AgendaCrud {
 		return entryContactos;
 	}
 	
-	public void borrarContacto(Entry <Contactos, Telefonos> entryContactos, String nombre) {
-
-		listaContactos.entrySet().remove(entryContactos);
+	public void borrarContacto(String nombre) {
+		
+		listaContactos.entrySet().remove(buscarContactoPorNombre(nombre));
+	}
+	
+	public void editarNombre(String nombre, String nuevoNombre) {
+		buscarContactoPorNombre(nombre).getKey().setNombre(nuevoNombre);		
+	}
+	
+	public void editarTelefono(String nombre, int nuevoTelefono) {
+		buscarContactoPorNombre(nombre).getValue().setNumero(nuevoTelefono);		
+	}
+	
+	public void agregarNuevoContacto(Contactos nombreC, Telefonos telefonoN) {
+		listaContactos.put(nombreC, telefonoN);
+	}
+	
+	public void buscar() {
+		
 	}
 
 }

@@ -25,7 +25,7 @@ public class CrudCurso {
 		return "CrudCurso [ca=" + ca + "]";
 	}
 	
-	public double calcularMediaCurso(String curso) {
+	//public double calcularMediaCurso(String curso) {
 		
-	}
+	//}
 }

@@ -36,7 +36,7 @@ public class Principal {
 		lista[3]=v4;
 		lista[4]=v5;
 		lista[5]=v6;
-		Parking p=new Parking("C/Virgén de Fatima", lista);
+		Parking p=new Parking();
 		
 		do {
 			System.out.println("""
@@ -58,7 +58,7 @@ public class Principal {
 			case 2:
 				System.out.println("Indique la matrícula del vehiculo deseado:");
 				matricula=sc.nextLine();
-				p.calcularPrecio(matricula, precioMin, limiteFurgo, limiteCmCubMotos, cantPorMetro, numDiv);
+				//p.calcularPrecio(matricula, precioMin, limiteFurgo, limiteCmCubMotos, cantPorMetro, numDiv);
 				break;
 			case 3:
 				break;
