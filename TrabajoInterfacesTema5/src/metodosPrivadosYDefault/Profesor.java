@@ -9,6 +9,19 @@ public class Profesor extends Persona implements ITrabajador, IColegio{
 		this.asignatura = asignatura;
 	}
 
+	public String getAsignatura() {
+		return asignatura;
+	}
+
+	public void setAsignatura(String asignatura) {
+		this.asignatura = asignatura;
+	}
+
+	@Override
+	public String toString() {
+		return "Profesor [asignatura=" + asignatura + "]";
+	}
+
 	@Override
 	public void entrarColegio() {
 		// TODO Auto-generated method stub
