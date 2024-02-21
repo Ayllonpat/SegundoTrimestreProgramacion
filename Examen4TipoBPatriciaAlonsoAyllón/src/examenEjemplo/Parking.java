@@ -12,11 +12,7 @@ public class Parking {
 		this.direccion = direccion;
 		this.lista = lista;
 	}
-	
-	public Parking() {
-		super();
-	}
-	
+		
 	public String getDireccion() {
 		return direccion;
 	}
@@ -34,7 +30,7 @@ public class Parking {
 	public String toString() {
 		return "Parking [direccion=" + direccion + ", lista=" + Arrays.toString(lista) + "]";
 	}
-	
+
 	public void mostrarLista() {
 		for(int i=0;i<tam;i++) {
 			System.out.println(lista[i]);
@@ -43,21 +39,24 @@ public class Parking {
 	
 	public Vehiculo buscar(String matricula) {
 		Vehiculo vehiculo = null;
-		for(int i=0;i<lista.length;i++) {
-			
+		boolean encontrado = false;
+		for(int i=0;i<lista.length && !encontrado ;i++) {			
 			if(lista[i].getMatricula().equals(matricula)) {
-				lista[i]=vehiculo;
-				
+				vehiculo=lista[i];	
 			}
 		}return vehiculo;
 	}
 	
-	/*public double calcularPrecio(String matricula, double precioMin, double limiteFurgo, double limiteCmCubMotos,
+	public double calcularPrecio(String matricula, double precioMin, double limiteFurgo, double limiteCmCubMotos,
 			double cantPorMetro, double numDiv) {
 		double precio;
 		
-		//precio=calcularPrecio(matricula, precioMin, limiteFurgo, limiteCmCubMotos, cantPorMetro, numDiv).buscar(matricula)
+		precio=buscar(matricula).calcularPrecio(precioMin, limiteFurgo, limiteCmCubMotos, cantPorMetro, numDiv);
 		return precio;
-	}*/
+	}
+	
+	public double calcularPrecioMotos() {
+		
+	}
 
 }

@@ -27,7 +27,10 @@ public class Vehiculo implements IAparcamiento{
 		this.matricula = matricula;
 	}
 
-
+	@Override
+	public String toString() {
+		return "Vehiculo [minsEstacionado=" + minsEstacionado + ", matricula=" + matricula + "]";
+	}
 
 	@Override
 	public double calcularPrecio(double precioMin, double limiteFurgo, double limiteCmCubMotos,
