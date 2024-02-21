@@ -4,6 +4,11 @@ public class Profesor extends Persona implements ITrabajador, IColegio{
 	
 	private String asignatura;
 
+	public Profesor(String nombre, String apellidos, int edad, String dni, String asignatura) {
+		super(nombre, apellidos, edad, dni);
+		this.asignatura = asignatura;
+	}
+
 	@Override
 	public void entrarColegio() {
 		// TODO Auto-generated method stub
@@ -15,5 +20,7 @@ public class Profesor extends Persona implements ITrabajador, IColegio{
 		// TODO Auto-generated method stub
 		
 	}
+	
+	
 
 }

@@ -39,9 +39,6 @@ public class Principal {
 		Telefonos t2=new Telefonos(654789813);
 		Telefonos t3=new Telefonos(654789814);
 		
-		Set <Contactos> listaNombres= listaContactos.keySet();
-		Collection <Telefonos> listaTelefonos=listaContactos.values();
-		
 		listaContactos.put(c1, t1);
 		listaContactos.put(c2, t2);
 		listaContactos.put(c3, t3);
@@ -97,6 +94,8 @@ public class Principal {
 			System.out.println("Escriba el contacto a buscar:");
 			nombre=sc.nextLine();
 			System.out.println(ac.buscarContactoPorNombre(nombre));
+			System.out.println(ac.findByNombre(nombre));
+			System.out.println(ac.findByNombreLista(nombre));
 			break;
 			
 		case 5:

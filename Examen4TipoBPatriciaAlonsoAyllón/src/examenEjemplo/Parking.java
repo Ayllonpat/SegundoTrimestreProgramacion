@@ -36,7 +36,7 @@ public class Parking {
 	}
 	
 	public void mostrarLista() {
-		for(int i=0;i<lista.length;i++) {
+		for(int i=0;i<tam;i++) {
 			System.out.println(lista[i]);
 		}
 	}

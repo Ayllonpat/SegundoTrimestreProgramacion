@@ -1,6 +1,8 @@
 package ejercicio04;
 
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -51,6 +53,23 @@ public class AgendaCrud {
 		}
 		
 		return entryContactos;
+	}
+	
+	public Contactos findByNombre(String nombre) {
+		for(Contactos contactos: listaContactos.keySet()) {
+			if(contactos.getNombre().equalsIgnoreCase(nombre)) {
+				return contactos;
+			}
+		}return null;
+	}
+	
+	public List<Contactos> findByNombreLista(String nombre) {
+		List<Contactos> aux= new ArrayList<Contactos>();
+		for(Contactos contactos: listaContactos.keySet()) {
+			if(contactos.getNombre().equalsIgnoreCase(nombre)) {
+				aux.add(contactos);
+			}
+		}return aux; //si telefono en una clase hay que crear un buscar telefono por nombre y llamarlo
 	}
 	
 	public void borrarContacto(String nombre) {
