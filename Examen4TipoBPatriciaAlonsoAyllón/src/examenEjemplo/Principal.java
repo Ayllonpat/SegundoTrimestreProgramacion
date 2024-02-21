@@ -20,7 +20,6 @@ public class Principal {
 		String aux;
 		String matricula;
 		
-		Vehiculo vehiculo = null;
 		Vehiculo v1=new Furgonetas(120, "1111AAA", 5.5);
 		Vehiculo v2=new Furgonetas(75, "2222BBB", 3.4);
 		Vehiculo v3=new Furgonetas(140, "3333CCC", 8.5);
@@ -28,15 +27,15 @@ public class Principal {
 		Vehiculo v5=new Motos(85, "5555EEE", 260);
 		Vehiculo v6=new Vehiculo(35, "6666FFF");
 		
-		
 		Vehiculo []lista=new Vehiculo[tam];
+		Parking p=new Parking("Calle Vigen de Fátima", lista);
 		lista[0]=v1;
 		lista[1]=v2;
 		lista[2]=v3;
 		lista[3]=v4;
 		lista[4]=v5;
 		lista[5]=v6;
-		Parking p=new Parking();
+		
 		
 		do {
 			System.out.println("""
@@ -58,16 +57,12 @@ public class Principal {
 			case 2:
 				System.out.println("Indique la matrícula del vehiculo deseado:");
 				matricula=sc.nextLine();
-				//p.calcularPrecio(matricula, precioMin, limiteFurgo, limiteCmCubMotos, cantPorMetro, numDiv);
+				System.out.println(p.calcularPrecio(matricula, precioMin, limiteFurgo, limiteCmCubMotos, cantPorMetro, numDiv));
+				
 				break;
 			case 3:
 				break;
 			case 4:
-				break;
-			case 5:
-				matricula=sc.nextLine();
-				p.buscar(matricula);
-				System.out.println(p.buscar(matricula));
 				break;
 			case 0:
 				System.out.println("Saliendo...");
