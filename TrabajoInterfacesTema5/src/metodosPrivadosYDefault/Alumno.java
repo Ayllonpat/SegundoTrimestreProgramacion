@@ -1,28 +1,32 @@
 package metodosPrivadosYDefault;
 
-import java.util.Set;
+import java.util.List;
 public class Alumno extends Persona implements IEstudios, IColegio{
 	
-	private String clase;
-	private Set<Persona> listaAlumnos;
+	private List<Persona> listaAlumnos;
 
-	public Alumno(String nombre, String apellidos, int edad, String dni, String clase) {
+	
+
+	public Alumno(String nombre, String apellidos, int edad, String dni, List<Persona> listaAlumnos) {
 		super(nombre, apellidos, edad, dni);
-		this.clase = clase;
+		this.listaAlumnos = listaAlumnos;
+	}
+	
+
+	public List<Persona> getListaAlumnos() {
+		return listaAlumnos;
 	}
 
-	public String getClase() {
-		return clase;
-	}
 
-	public void setClase(String clase) {
-		this.clase = clase;
+	public void setListaAlumnos(List<Persona> listaAlumnos) {
+		this.listaAlumnos = listaAlumnos;
 	}
 
 	@Override
 	public String toString() {
-		return "Alumno [clase=" + clase + "]";
+		return "Alumno [listaAlumnos=" + listaAlumnos + "]";
 	}
+
 
 	@Override
 	public void aniadirPersona(Persona p) {

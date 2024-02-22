@@ -41,12 +41,12 @@ public class Principal {
 		double notaRandom = 0;
 		
 		//añadimos objetos para tener datos en la lista
-		Persona p1=new Profesor("Patty", "Ayllón", 21, "1A", "Mates");
+		Persona p1=new Profesor("Patty", "Ayllón", 21, "1A");
 		Persona p2=new Practicante("Iván", "Machuca", 24, "2B");
 		Persona p3=new Alumno("Pedro", "Laffon", 12, "3C", "1ºA");
-		Persona p4=new Profesor("Carmen", "López", 43, "4D", "Literatura");
+		Persona p4=new Profesor("Carmen", "López", 43, "4D");
 		Persona p5=new Practicante("Dani", "Martínez", 19, "5I");
-		Persona p6=new Alumno("Maria", "Sánchez", 11, "6G", "3ºB");
+		Persona p6=new Alumno("Maria", "Sánchez", 11, "6G");
 		
 		listaPersonasColegio.add(p1);
 		listaPersonasColegio.add(p2);
