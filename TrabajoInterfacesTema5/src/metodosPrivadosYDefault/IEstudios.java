@@ -1,6 +1,6 @@
 package metodosPrivadosYDefault;
 
-public interface IEstudios {
+public interface IEstudios{
 	
 	default void estudiar() {
 		System.out.println("Ha abierto los apuntes");
