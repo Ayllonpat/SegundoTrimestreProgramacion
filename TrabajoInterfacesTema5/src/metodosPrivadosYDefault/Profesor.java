@@ -23,16 +23,20 @@ public class Profesor extends Persona implements ITrabajador, IColegio{
 	}
 
 	@Override
-	public void entrarColegio() {
+	public void aniadirPersona(Persona p) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void salirColegio() {
+	public void borrarPersona(Persona p) {
 		// TODO Auto-generated method stub
 		
 	}
+
+	
+
+	
 	
 	
 

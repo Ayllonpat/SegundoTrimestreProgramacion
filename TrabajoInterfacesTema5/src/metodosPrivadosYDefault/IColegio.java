@@ -2,13 +2,14 @@ package metodosPrivadosYDefault;
 
 public interface IColegio {
 	
-	//cuenta el número de personas que entran en el colegio
-	public void entrarColegio();
+	//añade personas
+	public void aniadirPersona(Persona p);
 	
-	//cuenta la gente que sale del colegio(restas)
-	public void salirColegio();
+	//borra peersonas
+	public void borrarPersona(Persona p);
 	
-	public static void mantenerSilencio() {
+	//
+	public static void mostrarSilencio() {
 		
 		System.out.println("Todos se callan");
 		

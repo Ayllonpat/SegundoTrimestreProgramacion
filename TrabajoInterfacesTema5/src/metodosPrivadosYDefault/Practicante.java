@@ -8,15 +8,19 @@ public class Practicante extends Persona implements IEstudios, ITrabajador, ICol
 	}
 
 	@Override
-	public void entrarColegio() {
+	public void aniadirPersona(Persona p) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void salirColegio() {
+	public void borrarPersona(Persona p) {
 		// TODO Auto-generated method stub
 		
 	}
+
+	
+
+	
 
 }

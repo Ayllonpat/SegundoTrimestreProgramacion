@@ -1,8 +1,10 @@
 package metodosPrivadosYDefault;
 
+import java.util.Set;
 public class Alumno extends Persona implements IEstudios, IColegio{
 	
 	private String clase;
+	private Set<Persona> listaAlumnos;
 
 	public Alumno(String nombre, String apellidos, int edad, String dni, String clase) {
 		super(nombre, apellidos, edad, dni);
@@ -23,26 +25,18 @@ public class Alumno extends Persona implements IEstudios, IColegio{
 	}
 
 	@Override
-	public void entrarColegio() {
-		// TODO Auto-generated method stub	
+	public void aniadirPersona(Persona p) {
+		listaAlumnos.add(p);
+		// TODO Auto-generated method stub
 	}
 
 	@Override
-	public void salirColegio() {
-		// TODO Auto-generated method stub	
+	public void borrarPersona(Persona p) {
+		listaAlumnos.remove(p);
+		// TODO Auto-generated method stub
+		
 	}
 	
-	@Override
-	public void estudiar() {
-		// TODO Auto-generated method stub
-		IEstudios.super.estudiar();
-	}
-	
-	@Override
-	public void hacerExamen() {
-		// TODO Auto-generated method stub
-		IEstudios.super.hacerExamen();
-	}
 	
 
 }

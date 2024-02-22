@@ -2,8 +2,10 @@ package metodosPrivadosYDefault;
 
 public interface ITrabajador {
 	
-	 default void corregir() {
-		 System.out.println("Se ha sentado a corregir");
+	 default int pasarLista(Persona []listaAlumnos) {
+		 int numeroAlumnos=0;
+		 numeroAlumnos=listaAlumnos.length;
+		 return numeroAlumnos;
 	 }
 	
 	 default void darClase() {

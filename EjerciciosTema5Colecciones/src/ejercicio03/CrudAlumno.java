@@ -7,8 +7,6 @@ public class CrudAlumno {
 	
 	private Set<Alumnos> listaAlumnos;
 	
-	
-	
 	public CrudAlumno(Set<Alumnos> listaAlumnos) {
 		super();
 		this.listaAlumnos = listaAlumnos;

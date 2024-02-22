@@ -2,12 +2,19 @@ package metodosPrivadosYDefault;
 
 public interface IEstudios{
 	
-	default void estudiar() {
-		System.out.println("Ha abierto los apuntes");
+	public default double hacerExamendouble (Double notaRandom){
+		double nota;
+		nota=notaRandom;
+		return nota;
 	}
 	
-	default void hacerExamen() {
-		System.out.println("Empieza el examen");
+	public default void mostrarAprobado(double nota) {
+		if(nota>5){
+			System.out.println("El alumno ha aprobado");
+		}else {
+			System.out.println("El alumno ha suspendido");
+		}
 	}
+	
 	
 }
