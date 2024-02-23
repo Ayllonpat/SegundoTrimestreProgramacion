@@ -1,46 +1,26 @@
 package metodosPrivadosYDefault;
 
-import java.util.List;
 public class Alumno extends Persona implements IEstudios, IColegio{
-	
-	private List<Persona> listaAlumnos;
 
-	
-
-	public Alumno(String nombre, String apellidos, int edad, String dni, List<Persona> listaAlumnos) {
+	public Alumno(String nombre, String apellidos, int edad, String dni) {
 		super(nombre, apellidos, edad, dni);
-		this.listaAlumnos = listaAlumnos;
+		// TODO Auto-generated constructor stub
 	}
 	
-
-	public List<Persona> getListaAlumnos() {
-		return listaAlumnos;
-	}
-
-
-	public void setListaAlumnos(List<Persona> listaAlumnos) {
-		this.listaAlumnos = listaAlumnos;
-	}
-
 	@Override
 	public String toString() {
-		return "Alumno [listaAlumnos=" + listaAlumnos + "]";
-	}
-
-
-	@Override
-	public void aniadirPersona(Persona p) {
-		listaAlumnos.add(p);
-		// TODO Auto-generated method stub
-	}
-
-	@Override
-	public void borrarPersona(Persona p) {
-		listaAlumnos.remove(p);
-		// TODO Auto-generated method stub
-		
+		return super.toString()+"Alumno";
 	}
 	
+
+	public double hacerExamen(double notaRandom) {
+		// TODO Auto-generated method stub
+		return IEstudios.super.hacerExamen(notaRandom);
+	}
 	
 
+	public void mostrarAprobado(double nota) {
+		// TODO Auto-generated method stub
+		IEstudios.super.mostrarAprobado(nota);
+	}
 }

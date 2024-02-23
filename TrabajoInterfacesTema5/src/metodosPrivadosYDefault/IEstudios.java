@@ -2,14 +2,15 @@ package metodosPrivadosYDefault;
 
 public interface IEstudios{
 	
-	public default double hacerExamendouble (Double notaRandom){
-		double nota;
-		nota=notaRandom;
-		return nota;
+	//genera una nota aleatoria
+	public default double hacerExamen (double notaRandom){
+		
+		return notaRandom;
 	}
-	
-	public default void mostrarAprobado(double nota) {
-		if(nota>5){
+	//muestra si el alumno ha aprobado o no
+	public default void mostrarAprobado(double notaRandom) {
+		
+		if(notaRandom>5){
 			System.out.println("El alumno ha aprobado");
 		}else {
 			System.out.println("El alumno ha suspendido");

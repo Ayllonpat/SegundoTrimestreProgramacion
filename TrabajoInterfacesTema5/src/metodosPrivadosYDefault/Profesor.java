@@ -3,47 +3,25 @@ package metodosPrivadosYDefault;
 import java.util.List;
 
 public class Profesor extends Persona implements ITrabajador, IColegio{
-	
-	private List<Persona> listaProfesores;
 
-	public Profesor(String nombre, String apellidos, int edad, String dni, List<Persona> listaProfesores) {
+	public Profesor(String nombre, String apellidos, int edad, String dni) {
 		super(nombre, apellidos, edad, dni);
-		this.listaProfesores = listaProfesores;
+		// TODO Auto-generated constructor stub
 	}
 	
-
-	public List<Persona> getListaProfesores() {
-		return listaProfesores;
-	}
-
-
-	public void setListaProfesores(List<Persona> listaProfesores) {
-		this.listaProfesores = listaProfesores;
-	}
-
-
 	@Override
 	public String toString() {
-		return "Profesor [listaProfesores=" + listaProfesores + "]";
-	}
+		return super.toString()+"Profesor";
+	}	
 
-	@Override
-	public void aniadirPersona(Persona p) {
+	public int pasarLista(List<Persona> listaAlumnos) {
 		// TODO Auto-generated method stub
-		listaProfesores.add(p);
-		
+		return ITrabajador.super.pasarLista(listaAlumnos);
 	}
+	
 
-	@Override
-	public void borrarPersona(Persona p) {
+	public void darClase(String dni) {
 		// TODO Auto-generated method stub
-		
+		ITrabajador.super.darClase(dni);
 	}
-
-	
-
-	
-	
-	
-
 }

@@ -3,35 +3,38 @@ package metodosPrivadosYDefault;
 import java.util.List;
 
 public class Practicante extends Persona implements IEstudios, ITrabajador, IColegio{
-	
-	private List<Persona> listaAlumnos;
-	private List<Persona> listaProfesores;
-	
+
 	public Practicante(String nombre, String apellidos, int edad, String dni) {
 		super(nombre, apellidos, edad, dni);
 		// TODO Auto-generated constructor stub
-		
 	}
-	
-
 	@Override
-	public void aniadirPersona(Persona p) {
-		// TODO Auto-generated method stub
-		listaAlumnos.add(p);
-		listaProfesores.add(p);
-		
+	public String toString() {
+		return super.toString()+"Practicante";
 	}
-
-	@Override
-	public void borrarPersona(Persona p) {
+	
+	
+	public double hacerExamen(double notaRandom) {
 		// TODO Auto-generated method stub
-		listaAlumnos.remove(p);
-		listaProfesores.remove(p);
-		
+		return IEstudios.super.hacerExamen(notaRandom);
 	}
-
 	
-
 	
+	public void mostrarAprobado(double nota) {
+		// TODO Auto-generated method stub
+		IEstudios.super.mostrarAprobado(nota);
+	}
+	
+	
+	public int pasarLista(List<Persona> listaAlumnos) {
+		// TODO Auto-generated method stub
+		return ITrabajador.super.pasarLista(listaAlumnos);
+	}
+	
+	
+	public void darClase(String dni) {
+		// TODO Auto-generated method stub
+		ITrabajador.super.darClase(dni);
+	}
 
 }

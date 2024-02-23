@@ -1,6 +1,6 @@
 package metodosPrivadosYDefault;
 
-public class Persona {
+public class Persona implements IEstudios, ITrabajador{
 	
 	private String nombre;
 	private String apellidos;
