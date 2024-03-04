@@ -1,6 +1,6 @@
 package ejercicio02;
 
-public class Trastero {
+public class Trastero implements Comparable<Trastero>{
 	
 	private double m2;
 	private String direccion;
@@ -52,6 +52,12 @@ public class Trastero {
 	public String toString() {
 		return "Trastero [m2=" + m2 + ", direccion=" + direccion + ", nTrastero=" + nTrastero + ", precio=" + precio
 				+ ", ocupado=" + ocupado + "]";
+	}
+
+	@Override
+	public int compareTo(Trastero o) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 	
 	

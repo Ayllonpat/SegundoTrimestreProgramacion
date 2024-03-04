@@ -37,14 +37,15 @@ public class Principal {
 		
 		List<Trastero> listaTrasteros=new ArrayList<Trastero>();
 		
-		double m2;
-		String direccion;
-		int nTrastero;
-		double precio;
-		boolean ocupado;
+		double m2=0;
+		String direccion=null;
+		int nTrastero=0;
+		double precio=0;
+		boolean ocupado=false;
 		String aux;
 		int opcion=0;
 		int subOpcion=0;
+		int nTrasteroNuevo= 0;
 		
 		//creamos objetos para tener datos base
 		Trastero t1=new Trastero(23.5, "C/Virgén Fatima Nº45", 0, 12.5, false);
@@ -109,10 +110,12 @@ public class Principal {
 							break;
 							
 						case 2:
+							o.mostrarListaNumero();
 							subOpcion=0;
 							break;
 							
 						case 3:
+							o.mostrarListaPrecio();
 							subOpcion=0;
 							break;
 						
@@ -133,10 +136,42 @@ public class Principal {
 				
 				do {
 					
+					System.out.println("""
+							
+							 Elija según que:
+								
+								1.Según precio
+								2.Según su número
+								3.Mostrar piso más caro
+								
+							--------------------------------------------------------------
+							""");
+					
 					aux=sc.nextLine();
 					subOpcion=Integer.parseInt(aux);
 					
 					switch(subOpcion) {
+					
+						case 1:
+							System.out.println("Indique el precio:");
+								aux=sc.nextLine();
+								precio=Double.parseDouble(aux);
+							System.out.println(o.buscarPorPrecio(precio));
+							subOpcion=0;
+							break;
+							
+						case 2:
+							System.out.println("Indique el número:");
+								aux=sc.nextLine();
+								nTrastero=Integer.parseInt(aux);
+							System.out.println(o.buscarPorNumero(nTrastero));
+							subOpcion=0;
+							break;
+							
+						case 3:
+							System.out.println(o.buscarPorMayorPrecio());
+							subOpcion=0;
+							break;
 					
 						case 0:
 							System.out.println("Saliendo...");
@@ -152,15 +187,58 @@ public class Principal {
 				break;
 				
 			case 3:
+				
+				System.out.println("Escriba los m2:");
+					aux=sc.nextLine();
+					m2=Double.parseDouble(aux);
+				System.out.println("Escriba la dirección:");
+					direccion=sc.nextLine();
+				System.out.println("Escriba el número del trastero:");
+					aux=sc.nextLine();
+					nTrastero=Integer.parseInt(aux);
+				System.out.println("Escriba el precio del día:");
+					aux=sc.nextLine();
+					precio=Double.parseDouble(aux);
+					
+				Trastero t=new Trastero(m2, direccion, nTrastero, precio, ocupado);	
+				
+				o.agregar(t);
+				
 				break;
 				
 			case 4:
+				System.out.println("Escriba el número del trastero que desea borrar:");
+					aux=sc.nextLine();
+					nTrastero=Integer.parseInt(aux);
+				o.borrar(nTrastero);
 				break;
 				
 			case 5:
+				System.out.println("Escriba el número del trastero que desea editar:");
+					aux=sc.nextLine();
+					nTrastero=Integer.parseInt(aux);
+					
+				System.out.println("Escriba los m2:");
+					aux=sc.nextLine();
+					m2=Double.parseDouble(aux);
+				System.out.println("Escriba la dirección:");
+					direccion=sc.nextLine();
+				System.out.println("Escriba el número del trastero:");
+					aux=sc.nextLine();
+					nTrasteroNuevo=Integer.parseInt(aux);
+				System.out.println("Escriba el precio del día:");
+					aux=sc.nextLine();
+					precio=Double.parseDouble(aux);
+				System.out.println("Escriba true o false:");
+					aux=sc.nextLine();
+					ocupado=Boolean.parseBoolean(aux);
+					
+					o.editar(nTrastero, m2, direccion, nTrasteroNuevo, precio, ocupado);
+					
 				break;
 				
 			case 6:
+				o.mostrarTrasterosVacios();
 				break;
 			
 			case 0:
