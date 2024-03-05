@@ -35,9 +35,13 @@ public class Palabra implements Comparable<Palabra>{
 	public String toString() {
 		return "Palabra [id=" + id + ", nombre=" + nombre + ", significado=" + significado + "]";
 	}
+
+	
 	public int compareTo(Palabra p1, Palabra p2) {
 		// TODO Auto-generated method stub
-		
+		if(id>getId()) {
+			return -1;
+		}
 		return 0;
 	}
 	

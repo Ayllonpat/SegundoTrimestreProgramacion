@@ -106,6 +106,7 @@ public class Principal {
 						
 						case 1:
 							o.mostrarListaOrdenAnianido();
+							
 							subOpcion=0;
 							break;
 							

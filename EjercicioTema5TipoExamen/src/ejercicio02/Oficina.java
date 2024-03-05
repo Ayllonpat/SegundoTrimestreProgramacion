@@ -25,11 +25,9 @@ public class Oficina {
 		return "Oficina [listaTrasteros=" + listaTrasteros + "]";
 	}
 	
-	public void mostrarListaOrdenAnianido() {
+	public void mostrarListaOrdenAnianido() {//ordenarPorAnianido
 		Collections.sort(listaTrasteros);
-		for(Trastero t:listaTrasteros) {
-			System.out.println(t);
-		}
+		
 		
 	}
 	
@@ -64,7 +62,14 @@ public class Oficina {
 		else 
 			return null;	
 	}
-	
+	//public List<Trastero> buscarPorPrecio(double precio){
+	// List<Trastero> listaPrecio=new ArrayList<Trastero>();
+		//for(Trastero t:listaTrastero){
+			//if(trastero.getPrecio()==precio){
+				//listaPrecio.add(trastero)
+			//}
+		//}
+	//}
 	public Trastero buscarPorNumero(int nTrastero) {
 		int i=0;
 		boolean encontrado=false;
