@@ -1,8 +1,6 @@
 package ejercicio;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.Iterator;
+import java.util.Collections;
 import java.util.List;
 
 public class Mazo {
@@ -28,10 +26,12 @@ public class Mazo {
 	}
 	
 	public void ordenarPorPalo(){
-		
+		Collections.sort(listaCartas);
 	}
 	
 	public void ordenarPorPuntuacion() {
+		
+		Collections.sort(listaCartas, new OrdenarPorPuntuacion());
 		
 	}
 	
@@ -44,21 +44,16 @@ public class Mazo {
 	}
 	
 	public Carta buscarCartaNYP(int numero, String palo) {
-		int i=0;
+		
 		boolean encontrado=false;
 		for(Carta c:listaCartas) {
-			Carta lista=listaCartas.get(i);
-			if(numero==lista.getNum() && palo==lista.getPalo()) {
-				encontrado=true;
+			if(numero==c.getNum() && palo==c.getPalo()) {
+				return c;
 			}else {
-				encontrado=false;
+				return null;
 			}
-		}
-		if(encontrado) {
-			return listaCartas.get(i);
-		}else {
-			return null;
-		}
+		}return null;
+		
 	}
 	
 	
@@ -84,7 +79,7 @@ public class Mazo {
 		}
 	
 	public Carta editar(Carta c, String nuevoNombre, int numero, String nombre) {
-		c=buscarCartaNYP(numero, nombre);;
+		c=buscarCartaNYP(numero, nombre);
 		c.setNombre(nuevoNombre);
 		return c;
 	}

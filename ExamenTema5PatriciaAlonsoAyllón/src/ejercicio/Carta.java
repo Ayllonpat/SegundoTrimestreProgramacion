@@ -72,7 +72,7 @@ public class Carta implements Comparable<Carta>{
 		// TODO Auto-generated method stub
 		
 		
-		return (c.getPalo()).toLowerCase().compareTo((c.getPalo()).toLowerCase());
+		return (c.palo).toLowerCase().compareTo((c.palo).toLowerCase());
 	}
 	
 	

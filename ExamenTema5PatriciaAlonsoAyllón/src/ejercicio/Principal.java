@@ -134,9 +134,9 @@ public class Principal {
 			m.mostrarLista();
 			
 			m.buscarCartaNYP(opcion, nombre);
-			m.buscarCartaValor0();
+			//m.buscarCartaValor0();
 			
-			m.editar(null, nombre, 0, nombre);
+			//m.editar(null, nombre, 0, nombre);
 			
 			
 		}while(opcion!=0);
