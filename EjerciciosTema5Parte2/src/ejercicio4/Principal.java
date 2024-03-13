@@ -1,7 +1,9 @@
 package ejercicio4;
 
-public class Principal {
+import java.time.format.DateTimeFormatter;
 
+public class Principal {
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 				
@@ -12,6 +14,9 @@ public class Principal {
 				y que, a su vez, haya métodos que hagan operaciones con la lista pero utilizando los atributos LocalDate y
 				LocalTime. 
 		 */
+		
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd MM yy");
+
 
 	}
 
