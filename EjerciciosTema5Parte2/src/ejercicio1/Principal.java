@@ -1,5 +1,6 @@
 package ejercicio1;
 
+import java.nio.file.DirectoryStream.Filter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -57,6 +58,8 @@ public class Principal {
 		listaAlumnos.add(new Alumno("Alejandro", "Cannesa", "1DAM", 9.5, 23));
 		listaAlumnos.add(new Alumno("Alex", "Cannesa", "1DAM", 9.5, 23));
 		
+		Secretaria s=new Secretaria(listaAlumnos);
+		
 		do {
 		
 			System.out.println("""
@@ -85,27 +88,32 @@ public class Principal {
 			switch(opcion) {
 				case 1:
 					listaAlumnos.stream()
-					.filter(AlumnoUtils.filtroCurso("1DAM"))
+					.filter(Secretaria.filtroCurso("1DAM"))
 					//.map(alumno -> alumno.getNombre())
 					.forEach(System.out::println);
 					break;
 				case 2:
 					System.out.println("Escriba la letra:");
 					primeraLetra=sc.nextLine();
-					
-					
+					listaAlumnos.stream()
+					.filter(Secretaria.filtroPrimeraLetra(primeraLetra))
+					.forEach(System.out::println);
 					break;
 				case 3:
-					
+					System.out.println(s.devolverTamanioLista());
 					break;
 				case 4:
 					listaAlumnos.stream()
-					.filter(AlumnoUtils.filtroMediaMayor9(9))
+					.filter(Secretaria.filtroMediaMayor9(9))
 					.forEach(System.out::println);
 					break;
 				case 5:
+					//System.out.println(s.filtro3Primeras());
 					break;
 				case 6:
+					listaAlumnos.stream()
+					.filter(Secretaria.filtroMenorEdad())
+					.forEach(System.out::println);
 					break;
 				case 7:
 					break;

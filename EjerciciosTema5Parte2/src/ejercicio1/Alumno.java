@@ -2,6 +2,7 @@ package ejercicio1;
 
 public class Alumno {
 	
+
 	private String nombre;
 	private String apellidos;
 	private String nombreCurso;
@@ -54,5 +55,4 @@ public class Alumno {
 				+ notaMedia + ", edad=" + edad + "]";
 	}
 	
-
 }
