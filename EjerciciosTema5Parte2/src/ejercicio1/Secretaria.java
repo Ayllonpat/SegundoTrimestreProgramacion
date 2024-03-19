@@ -53,10 +53,13 @@ public class Secretaria {
 		return listaAlumnos.size();
 	}
 	//mostrar los tres primeros de la lista
-	//public Alumno filtro3Primeras(){
+	public static Predicate<Alumno> filtro3Primeras(){
 		
+		return(Alumno a) ->{
+			return 
+		}
 		
-	//}
+	}
 	
 	//alumno más pequeño
 	public static Predicate<Alumno> filtroMenorEdad(){
